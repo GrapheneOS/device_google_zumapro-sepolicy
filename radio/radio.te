@@ -2,6 +2,8 @@ set_prop(radio, telephony_ril_prop)
 set_prop(radio, telephony_modemtype_prop)
 get_prop(radio, telephony_ntn_demo_mode_prop)
 
+allow radio hal_exynos_rild_hwservice:hwservice_manager find;
+
 allow radio radio_vendor_data_file:dir rw_dir_perms;
 allow radio radio_vendor_data_file:file create_file_perms;
 allow radio vendor_ims_app:udp_socket { getattr read write setopt shutdown };
